@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Player Search</title>
+</head>
+<body>
+<h1>Player Search </h1>
+
+<form th:action="@{/(param1=name_part)}">
+    <label for="name_part"> Please enter first or last name: </label>
+    <input type="text" id="name_part" th:name="name_part" class="searchField"><br><br>
+    <input type="submit" th:value="Search" placeholder=" players first or last name " class="searchSubmit">
+</form>
+<div th:each="name_part: ${rows}">
+    <p th:text="${'Name: ' + name_part.getNameFirst() + ' '+ name_part.getNameLast()}">Name</p>
+    <p th:text="${'Position: ' + name_part.getPosition()}">Position</p>
+    <p th:text="${'Debut Date: ' + name_part.getProDebutDate()}">Debut Date</p>
+    <p th:text="${'Active: ' + name_part.getActiveSw()}">Status</p>
+    <p th:text="${'Player ID: ' + name_part.getPlayerId()}">Id</p>
+    <p>________________________________________________________</p>
+</div>
+<script>
+    const searchSubmit = document.querySelector('.searchSubmit');
+    const searchField = document.querySelector('.searchField');
+    searchField.focus();
+
+    function updateSearch () {
+        const userSearch = String(searchField.textContent);
+    }
+            searchSubmit.addEventListener('click', updateSearch);
+
+</script>
+</body>
+</html>
