@@ -7,13 +7,13 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SportHittingTm { //API for current player hitting stats
-    private queryResults queryResults;
+    private QueryResults queryResults;
 
-    public queryResults getQueryResults() {
+    public QueryResults getQueryResults() {
         return queryResults;
     }
 
-    public void setQueryResults(queryResults queryResults) {
+    public void setQueryResults(QueryResults queryResults) {
         this.queryResults = queryResults;
     }
 }

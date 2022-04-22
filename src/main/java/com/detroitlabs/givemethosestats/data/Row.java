@@ -13,6 +13,7 @@ public class Row { //Player search details from API
     private String nameLast;
     private String activeSw;
     private String proDebutDate;
+    private String teamFull;
 
     private String hr;
     private String season;
@@ -67,6 +68,14 @@ public class Row { //Player search details from API
 
     public void setProDebutDate(String proDebutDate) {
         this.proDebutDate = proDebutDate;
+    }
+
+    public String getTeamFull() {
+        return teamFull;
+    }
+
+    public void setTeamFull(String teamFull) {
+        this.teamFull = teamFull;
     }
 
     public String getHr() {

@@ -1,9 +1,9 @@
 package com.detroitlabs.givemethosestats.data;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.stereotype.Component;
 
-@Component
+@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PlayerDetails {
     private String player_id;

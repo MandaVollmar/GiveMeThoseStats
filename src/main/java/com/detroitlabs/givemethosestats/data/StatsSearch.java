@@ -1,8 +1,12 @@
 package com.detroitlabs.givemethosestats.data;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
+import java.util.List;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -25,4 +29,5 @@ public class StatsSearch {
     public void setSportHittingTm(SportHittingTm sportHittingTm) {
         this.sportHittingTm = sportHittingTm;
     }
+
 }

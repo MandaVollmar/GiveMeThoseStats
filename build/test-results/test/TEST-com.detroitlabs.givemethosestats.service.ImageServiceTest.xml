@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.detroitlabs.givemethosestats.service.ImageServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-22T21:55:23" hostname="Amandas-MBP.hsd1.co.comcast.net" time="2.283">
+  <properties/>
+  <testcase name="ShouldFetchPlayerImageURL()" classname="com.detroitlabs.givemethosestats.service.ImageServiceTest" time="2.283"/>
+  <system-out><![CDATA[15:55:23.785 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET https://imsea.herokuapp.com/api/1?q=mookie_betts_dodgers
+15:55:23.828 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+15:55:25.643 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+15:55:25.649 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [com.detroitlabs.givemethosestats.data.ImageSearch]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

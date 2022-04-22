@@ -1,0 +1,4 @@
+‘15:55:23.785 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET https://imsea.herokuapp.com/api/1?q=mookie_betts_dodgers
+}15:55:23.828 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+_15:55:25.643 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+Ž15:55:25.649 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [com.detroitlabs.givemethosestats.data.ImageSearch]
