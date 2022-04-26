@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.detroitlabs.givemethosestats.service.MLBServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-04-26T14:19:12" hostname="Amandas-MacBook-Pro.local" time="0.179">
+  <properties/>
+  <testcase name="shouldFetchPlayerSearch()" classname="com.detroitlabs.givemethosestats.service.MLBServiceTest" time="0.122"/>
+  <testcase name="shouldFetchHittingStats()" classname="com.detroitlabs.givemethosestats.service.MLBServiceTest" time="0.056"/>
+  <system-out><![CDATA[08:19:12.875 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET http://lookup-service-prod.mlb.com/json/named.search_player_all.bam?sport_code='mlb'&active_sw='Y'&name_part='betts%25'
+08:19:12.881 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+08:19:12.974 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+08:19:12.981 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [com.detroitlabs.givemethosestats.data.StatsSearch]
+08:19:12.995 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET http://lookup-service-prod.mlb.com/json/named.sport_hitting_tm.bam?league_list_id='mlb'&game_type='R'&season='2022'&player_id='605141'
+08:19:13.000 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+08:19:13.002 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [parameters] as "application/json"
+08:19:13.041 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+08:19:13.042 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [com.detroitlabs.givemethosestats.data.StatsSearch]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

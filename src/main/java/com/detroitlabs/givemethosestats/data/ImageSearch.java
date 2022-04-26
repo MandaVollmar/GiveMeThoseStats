@@ -1,11 +1,12 @@
 package com.detroitlabs.givemethosestats.data;
 
+import com.detroitlabs.givemethosestats.service.MLBService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ImageSearch {
+public class ImageSearch extends StatsSearch{
     private List<String> results;
 
     public List<String> getResults() {
@@ -16,8 +17,4 @@ public class ImageSearch {
         this.results = results;
     }
 
-    public String imageResultMatch (){// method to find matching image to player found.
-
-        return null;
-    }
 }

@@ -36,5 +36,17 @@ public class MLBService {
                 gameType +"'&season='"+ season +"'&player_id='"+ playerId+"'";
         return restTemplate.exchange(url, HttpMethod.GET, entity, StatsSearch.class).getBody();
     }
+    public static StatsSearch fetchCareerHittingStats (String game_type, String player_id) throws UnsupportedEncodingException {
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+        httpHeaders.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+        HttpEntity<String> entity = new HttpEntity<>("parameters", httpHeaders);
+        String gameType = URLEncoder.encode(game_type, StandardCharsets.UTF_8.toString());
+        String playerId = URLEncoder.encode(player_id, StandardCharsets.UTF_8.toString());
+        String url = "http://lookup-service-prod.mlb.com/json/named.sport_career_hitting.bam?league_list_id='mlb'&game_type='" +
+                gameType + "'&player_id='" + playerId + "'";
+        return restTemplate.exchange(url, HttpMethod.GET, entity, StatsSearch.class).getBody();
+    }
 
 }

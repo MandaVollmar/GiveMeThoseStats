@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Career Hitting Stats</title>
+</head>
+<body>
+<div th:each="player_id: ${rows}">
+    <strong>
+        <p th:text="${'Name: ' + firstName + ' '+ lastName}">Name</p>
+        <p th:text="${'Season: ' + player_id.getSeason()}">Season</p>
+        <p th:text="${'Home Runs: ' + player_id.getHr()}">Home Runs</p>
+        <p th:text="${'Slugging Percentage: ' + player_id.getSlg()}">Slugging %</p>
+        <p th:text="${'Stolen Bases: ' + player_id.getSb()}">Stolen Bases</p>
+        <p th:text="${'Runs Batted In: ' + player_id.getRbi()}">Id</p>
+        <p th:text="${'On Base Percentage: ' + player_id.getObp()}">OBP</p>
+        <p>________________________________________________________</p>
+    </strong>
+</div>
+
+</body>
+</html>

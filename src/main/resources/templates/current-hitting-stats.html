@@ -6,10 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Current Hitting Stats</title>
+    <style>
+        body{
+            background-image: url("http://fivetoolschool.com/wp-content/uploads/2016/03/Hit-With-Power-01.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        p{
+            font-size: 18pt;
+            color: whitesmoke;
+        }
+    </style>
 </head>
 <body>
 <div th:each="player_id: ${rows}">
-    <p th:text="${'Name: ' + player_id.getNameFirst() + ' '+ player_id.getNameLast()}">Name</p>
+    <strong>
+    <p th:text="${'Name: ' + firstName + ' '+ lastName}">Name</p>
     <p th:text="${'Season: ' + player_id.getSeason()}">Season</p>
     <p th:text="${'Home Runs: ' + player_id.getHr()}">Home Runs</p>
     <p th:text="${'Slugging Percentage: ' + player_id.getSlg()}">Slugging %</p>
@@ -17,6 +29,7 @@
     <p th:text="${'Runs Batted In: ' + player_id.getRbi()}">Id</p>
     <p th:text="${'On Base Percentage: ' + player_id.getObp()}">OBP</p>
     <p>________________________________________________________</p>
+    </strong>
 </div>
 </body>
 </html>

@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Row { //Player search details from API
+public class Row { //Player details from MLB API
     private String playerId;
     private String position;
     private String nameFirst;

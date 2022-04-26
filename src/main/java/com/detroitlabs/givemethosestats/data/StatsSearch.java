@@ -13,6 +13,8 @@ import java.util.List;
 public class StatsSearch {
     private SearchPlayerAll searchPlayerAll;
     private SportHittingTm sportHittingTm;
+    private SportCareerHitting sportCareerHitting;
+    private ImageSearch imageSearch;
 
     public SearchPlayerAll getSearchPlayerAll() {
         return searchPlayerAll;
@@ -28,6 +30,33 @@ public class StatsSearch {
 
     public void setSportHittingTm(SportHittingTm sportHittingTm) {
         this.sportHittingTm = sportHittingTm;
+    }
+
+    public SportCareerHitting getSportCareerHitting() {
+        return sportCareerHitting;
+    }
+
+    public void setSportCareerHitting(SportCareerHitting sportCareerHitting) {
+        this.sportCareerHitting = sportCareerHitting;
+    }
+
+    public ImageSearch getImageSearch() {
+        return imageSearch;
+    }
+
+    public void setImageSearch(ImageSearch imageSearch) {
+        this.imageSearch = imageSearch;
+    }
+
+    public String getImageMatch (){
+        for(int index =0; index <= getSearchPlayerAll().getQueryResults().getAllRows().size(); index++)
+
+        if (imageSearch.getResults().get(0).contains(searchPlayerAll.getQueryResults().getAllRows().get(index).getTeamFull())) {
+            String match = imageSearch.getResults().get(index);
+            return match;
+
+        }
+        return null;
     }
 
 }

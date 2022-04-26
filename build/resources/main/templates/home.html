@@ -15,15 +15,23 @@
     text-align: center;
     color: darkgreen;
   }
+  p{
+    text-align: center;
+    color: darkgreen;
+  }
+  form{
+    text-align: center;
+  }
 </style>
 </head>
 <body>
 <h1>Give Me Those Stats</h1>
-<form th:action="/player-search" th:object="${}" method="post">
-  <p> Please enter active status and first or last name: </p>
-  <input name = "userEnteredStatus" type="search" placeholder="Y or N for active status"/>
-  <input name = "userEnteredName" type="search" placeholder="Search Name" autocomplete="on"/>
-  <input type="submit" value="Submit" th:onclick="load '/player-search'">
+<!--<form th:action="${'/home'}" th:object="${}" method="post">-->
+  <form th:action="${'/player-search'}">
+    <p> <strong> Please enter active status and first or last name:</strong> </p>
+  <input name = "active_sw" type="search" placeholder="Y or N for active status"/>
+  <input name = "name_part" type="search" placeholder="Search Name" autocomplete="on"/>
+  <input type="submit" value="Submit" >
 </form>
 </body>
 </html>
