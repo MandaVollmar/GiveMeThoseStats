@@ -22,15 +22,34 @@
   form{
     text-align: center;
   }
+  th {
+    text-align: center;
+    font-family: cursive;
+    font-size: 20px;
+  }
 </style>
 </head>
 <body>
+<br>
+
+<table style="width:100%">
+  <tr style="background: lightblue">
+    <th style=" width: 20%"><a href="/"> Home</a></th>
+    <th style=" width: 20%"><a th:href="${'player-search'}">Player Search</a></th>
+    <th style=" width: 20%"><a th:href="${'current-hitting-stats'}">Season Hitting Stats</a></th>
+    <th style=" width: 20%"><a th:href="${'career-hitting-stats'}">Career Hitting Stats</a></th>
+    <th style=" width: 20%"><a th:href="${'videos'}">Did You See That?</a></th>
+  </tr>
+</table>
+<br>
+
 <h1>Give Me Those Stats</h1>
-<!--<form th:action="${'/home'}" th:object="${}" method="post">-->
+
+
   <form th:action="${'/player-search'}">
-    <p> <strong> Please enter active status and first or last name:</strong> </p>
+    <p> <strong> Please enter active status and players name:</strong> </p>
   <input name = "active_sw" type="search" placeholder="Y or N for active status"/>
-  <input name = "name_part" type="search" placeholder="Search Name" autocomplete="on"/>
+  <input name = "name_part" type="search" placeholder="Search Full or Partial Name" autocomplete="on"/>
   <input type="submit" value="Submit" >
 </form>
 </body>

@@ -44,17 +44,18 @@ public class SiteController {
     }
 
     @RequestMapping("/current-hitting-stats")
-    public String displayCurrentHittingStats (ModelMap modelMap) throws UnsupportedEncodingException {
-        StatsSearch currentHitting = MLBService.fetchHittingStats("R","2022", "605141");
-        StatsSearch search = MLBService.fetchPlayerSearch("Y", "betts");
+    public String displayCurrentHittingStats (ModelMap modelMap)
+            throws UnsupportedEncodingException {
+        StatsSearch currentHitting = MLBService.fetchHittingStats("R","2022", "668227");
+        StatsSearch search = MLBService.fetchPlayerSearch("Y", "arozarena");
         List<Row> rows = currentHitting.getSportHittingTm().getQueryResults().getRow();
         String firstNameInfo = search.getSearchPlayerAll().getQueryResults().getAllRows().get(0).getNameFirst();
         String lastNameInfo = search.getSearchPlayerAll().getQueryResults().getAllRows().get(0).getNameLast();
-        String playerId = search.getSearchPlayerAll().getQueryResults().getAllRows().get(0).getPlayerId();
+        String player_id = search.getSearchPlayerAll().getQueryResults().getAllRows().get(0).getPlayerId();
         modelMap.put("firstName", firstNameInfo);
         modelMap.put("lastName", lastNameInfo);
         modelMap.put("rows", rows);
-        return "current-hitting-stats";
+        return new String("/current-hitting-stats");
     }
     @RequestMapping("/career-hitting-stats")
     public String displayCareerHittingStats (ModelMap modelMap) throws UnsupportedEncodingException {

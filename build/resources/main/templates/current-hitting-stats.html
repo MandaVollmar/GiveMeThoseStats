@@ -16,9 +16,31 @@
             font-size: 18pt;
             color: whitesmoke;
         }
+        th {
+            text-align: center;
+            font-family: cursive;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
+<br>
+
+<table style="width:100%">
+    <tr style="background: lightblue">
+        <th style=" width: 20%"><a href="/"> Home</a></th>
+        <th style=" width: 20%"><a th:href="${'player-search'}">Player Search</a></th>
+        <th style=" width: 20%"><a th:href="${'current-hitting-stats'}">Season Hitting Stats</a></th>
+        <th style=" width: 20%"><a th:href="${'career-hitting-stats'}">Career Hitting Stats</a></th>
+        <th style=" width: 20%"><a th:href="${'videos'}">Did You See That?</a></th>
+    </tr>
+</table>
+<br>
+<!--<form th:action="${'/current-hitting-stats'}" method="post">-->
+<!--    <input name = "season" type="submit"/>-->
+<!--    <input name = "player_id" type="submit"/>-->
+<!--    <input type="submit" value="Submit">-->
+<!--</form>-->
 <div th:each="player_id: ${rows}">
     <strong>
     <p th:text="${'Name: ' + firstName + ' '+ lastName}">Name</p>

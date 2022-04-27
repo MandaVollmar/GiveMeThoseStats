@@ -1,17 +1,5 @@
-‘08:19:12.218 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET https://imsea.herokuapp.com/api/1?q=mookie_betts_dodgers
-}08:19:12.399 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
-p08:19:12.857 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 503 SERVICE_UNAVAILABLE
-	Ð08:19:12.875 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET http://lookup-service-prod.mlb.com/json/named.search_player_all.bam?sport_code='mlb'&active_sw='Y'&name_part='betts%25'
-	}08:19:12.881 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
-	_08:19:12.974 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
-	Ž08:19:12.981 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [com.detroitlabs.givemethosestats.data.StatsSearch]
-	
-ß08:19:12.995 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET http://lookup-service-prod.mlb.com/json/named.sport_hitting_tm.bam?league_list_id='mlb'&game_type='R'&season='2022'&player_id='605141'
-	
-}08:19:13.000 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
-	
-z08:19:13.002 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [parameters] as "application/json"
-	
-_08:19:13.041 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
-	
-Ž08:19:13.042 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [com.detroitlabs.givemethosestats.data.StatsSearch]
+Õ14:55:47.572 [Test worker] DEBUG org.springframework.web.client.RestTemplate - HTTP GET http://lookup-service-prod.mlb.com/json/named.sport_career_hitting.bam?league_list_id='mlb'&game_type='R'&player_id='605141'
+}14:55:47.664 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Accept=[application/json, application/*+json]
+z14:55:47.667 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Writing [parameters] as "application/json"
+_14:55:47.763 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Response 200 OK
+Ž14:55:47.767 [Test worker] DEBUG org.springframework.web.client.RestTemplate - Reading to [com.detroitlabs.givemethosestats.data.StatsSearch]

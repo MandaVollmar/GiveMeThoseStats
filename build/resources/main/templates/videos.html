@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
     <title>Did You See That?</title>
+
+    <style>
+        body{
+            background-image: url("https://www.eastbaytimes.com/wp-content/uploads/2021/07/EBT-L-FIREWORKS-0703-10.jpg");
+            background-size: contain;
+        }
+        p{
+            font-size: 18pt;
+            color: whitesmoke;
+        }
+        th {
+            text-align: center;
+            font-family: cursive;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
+<br>
+
+<table style="width:100%">
+    <tr style="background: lightblue">
+        <th style=" width: 20%"><a href="/"> Home</a></th>
+        <th style=" width: 20%"><a th:href="${'player-search'}">Player Search</a></th>
+        <th style=" width: 20%"><a th:href="${'current-hitting-stats'}">Season Hitting Stats</a></th>
+        <th style=" width: 20%"><a th:href="${'career-hitting-stats'}">Career Hitting Stats</a></th>
+        <th style=" width: 20%"><a th:href="${'videos'}">Did You See That?</a></th>
+    </tr>
+</table>
+<br>
+<p>Jackie Steals Home</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6XY-XshGhMU?start=139" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Griffeys hit back-to-back home runs</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vCk1UY5Afus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>Trea Slides </p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/r1zxtCGDZhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G14OkVhRL-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -12,5 +50,16 @@
 <p>Choi Splits</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sGPDRjNILj4?start=139" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<p>Grichuk robs home run</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nmrERCD0R9g?start=139" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>2020 Game 4 Dodger Error</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dIRlvkO7aa0?start=139" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Gavin Lux Crashes</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g6lIasp7zyk?start=139" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Kevin Mitchell One-handed Catch</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4u0MzrYPm4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>

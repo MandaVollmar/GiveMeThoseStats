@@ -24,8 +24,18 @@ class MLBServiceTest {
 
     @Test
     void shouldFetchHittingStats() throws UnsupportedEncodingException {
-        //Assert
+        //Arrange
         MLBService.fetchHittingStats("R", "2022", "605141");
+        // Act
+        boolean result = testMLBService.equals(true);
+        //Assert
+        assertNotNull(true);
+    }
+
+    @Test
+    void shouldFetchCareerHittingStats() throws UnsupportedEncodingException {
+        //Arrange
+        MLBService.fetchCareerHittingStats("R", "605141");
         // Act
         boolean result = testMLBService.equals(true);
         //Assert

@@ -187,12 +187,29 @@
                 transition-duration: 0s;
             }
         }
+        th {
+            text-align: center;
+            font-family: cursive;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
+<br>
+
+<table style="width:100%">
+    <tr style="background: lightblue">
+        <th style=" width: 20%"><a href="/"> Home</a></th>
+        <th style=" width: 20%"><a th:href="${'player-search'}">Player Search</a></th>
+        <th style=" width: 20%"><a th:href="${'current-hitting-stats'}">Season Hitting Stats</a></th>
+        <th style=" width: 20%"><a th:href="${'career-hitting-stats'}">Career Hitting Stats</a></th>
+        <th style=" width: 20%"><a th:href="${'videos'}">Did You See That?</a></th>
+    </tr>
+</table>
+<br>
 <h1>Player Search </h1>
 
-<form th:action="${'/player-search'}" th:object="${search}" method="post">
+<form th:action="${'/player-search'}" method="post">
     <p> Please enter active status and player name: </p>
     <input name = "active_sw" type="search" placeholder="Y or N for active status"/>
     <input name = "name_part" type="search" placeholder="Search Name" autocomplete="on"/>
