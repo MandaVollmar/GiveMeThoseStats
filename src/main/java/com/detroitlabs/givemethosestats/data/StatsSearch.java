@@ -14,6 +14,7 @@ public class StatsSearch {
     private SearchPlayerAll searchPlayerAll;
     private SportHittingTm sportHittingTm;
     private SportCareerHitting sportCareerHitting;
+    private SportPitchingTm sportPitchingTm;
     private ImageSearch imageSearch;
 
     public SearchPlayerAll getSearchPlayerAll() {
@@ -38,6 +39,14 @@ public class StatsSearch {
 
     public void setSportCareerHitting(SportCareerHitting sportCareerHitting) {
         this.sportCareerHitting = sportCareerHitting;
+    }
+
+    public SportPitchingTm getSportPitchingTm() {
+        return sportPitchingTm;
+    }
+
+    public void setSportPitchingTm(SportPitchingTm sportPitchingTm) {
+        this.sportPitchingTm = sportPitchingTm;
     }
 
     public ImageSearch getImageSearch() {

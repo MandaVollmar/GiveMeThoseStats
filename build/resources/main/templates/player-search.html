@@ -192,6 +192,19 @@
             font-family: cursive;
             font-size: 20px;
         }
+        h1{
+            text-align: center;
+            color: darkgreen;
+            font-size: 45pt;
+            text-shadow: 2px 2px 5px aliceblue;
+        }
+        p{
+            text-align: center;
+            color: mediumspringgreen;
+            font-size: 18pt;
+            font-weight: bolder;
+            text-shadow: 2px 2px 5px black;
+        }
     </style>
 </head>
 <body>
@@ -199,11 +212,12 @@
 
 <table style="width:100%">
     <tr style="background: lightblue">
-        <th style=" width: 20%"><a href="/"> Home</a></th>
-        <th style=" width: 20%"><a th:href="${'player-search'}">Player Search</a></th>
-        <th style=" width: 20%"><a th:href="${'current-hitting-stats'}">Season Hitting Stats</a></th>
-        <th style=" width: 20%"><a th:href="${'career-hitting-stats'}">Career Hitting Stats</a></th>
-        <th style=" width: 20%"><a th:href="${'videos'}">Did You See That?</a></th>
+        <th style=" width: 17%"><a href="/"> Home</a></th>
+        <th style=" width: 17%"><a th:href="${'player-search'}">Player Search</a></th>
+        <th style=" width: 17%"><a th:href="${'current-hitting-stats'}">Season Hitting Stats</a></th>
+        <th style=" width: 17%"><a th:href="${'current-pitching-stats'}">Season Pitching Stats</a></th>
+        <th style=" width: 17%"><a th:href="${'career-hitting-stats'}">Career Hitting Stats</a></th>
+        <th style=" width: 17%"><a th:href="${'videos'}">Did You See That?</a></th>
     </tr>
 </table>
 <br>
